@@ -25,6 +25,7 @@ class InstallCommand extends Command
      */
     public function handle()
     {
+        $this->call('key:generate');
         $this->call('storage:link');
         $this->call('migrate');
         return self::SUCCESS;
